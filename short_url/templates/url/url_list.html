@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}
+  Список ссылок
+{% endblock %}
+{% block content %}
+{% for url in list_url %}
+<ul>
+  Оригинальный URL: <a class="nav-link link-light " href="{{ url.url }}" >{{ url.url }}</a>
+  Сокращенный URL: <a class="nav-link link-light " href="{{url.short_url}}" >{{url.short_url}}</a>
+</ul>
+<hr>
+{% endfor %}
+{% endblock %}

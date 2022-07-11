@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Изменить URL
+{%endblock%}
+{% block content %}
+     <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-md-8 p-5">
+            <div class="card">
+              <div class="card-header">
+
+                  Добавить
+
+              </div>
+              <div class="card-body">
+                       <form method="post"
+                       enctype="multipart/form-data">
+
+
+                {% csrf_token %}
+                  <div class="form-group row my-3 p-3">
+
+                    {{ form.as_p }}
+<!--                    <small id="id_text-help" class="form-text text-muted">-->
+
+<!--                    </small>-->
+
+                  </div>
+
+                  <div class="form-group row my-3 p-3">
+                    {% if short_url %}
+                      <div>
+
+                        Сокращенный URL:
+                      </div>
+                      <h4>
+                        <a class="nav-link link-light " href="{{ short_url }}" >{{ short_url }}</a>
+                       </h4>
+                    {% endif %}
+                  </div>
+
+                  <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary">
+
+                        Сократить
+
+                    </button>
+                  </div>
+                </form>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+{%endblock%}
