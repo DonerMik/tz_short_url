@@ -31,5 +31,5 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 
-При возникновении вопросов пишите на електронную почту.
+При возникновении вопросов пишите на электронную почту.
 Автор: Микутайтис Денис. Почта: denismik92@gmail.com
