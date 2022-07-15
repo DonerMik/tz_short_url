@@ -27,9 +27,9 @@ python3 -m pip install --upgrade pip
 pip install -r requirements.txt
 
 Для запуска сервиса необходимо запустить его веб-приложение:
-python manage.py makemigrations
-python manage.py migrate
-python manage.py runserver
+- python manage.py makemigrations
+- python manage.py migrate
+- python manage.py runserver
 
 При возникновении вопросов пишите на электронную почту.
 Автор: Микутайтис Денис. Почта: denismik92@gmail.com
