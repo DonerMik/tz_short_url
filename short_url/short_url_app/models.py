@@ -18,4 +18,4 @@ class Url(models.Model):
     short_url = models.URLField('Short URL:', blank=True,
                                 null=True,
                                 unique=True
-                         )
+                                )

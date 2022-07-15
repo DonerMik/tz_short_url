@@ -1,6 +1,6 @@
 from django.urls import path
 
-from . import views
+from short_url_app import views
 
 app_name = 'short_url'
 

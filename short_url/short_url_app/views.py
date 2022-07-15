@@ -1,18 +1,19 @@
 import base64
 
+from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import redirect, render, get_object_or_404, get_list_or_404
-from django.conf import settings
+from django.shortcuts import (get_list_or_404, get_object_or_404, redirect,
+                              render)
 
-from .forms import UrlForm
-from .models import Url
+from short_url_app.forms import UrlForm
+from short_url_app.models import Url
 
 User = get_user_model()
 
 
 def get_short_url(url):
-    'The function gives a slug for short url.'
+    ''' The function gives a slug for short url.'''
 
     slug = ascii(base64.b64encode(url.encode()))
     return slug[-7:-1]
@@ -22,7 +23,6 @@ def get_short_url(url):
 def generate_url(request):
     form = UrlForm(
         request.POST
-
     )
 
     if form.is_valid():

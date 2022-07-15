@@ -15,7 +15,6 @@ ALLOWED_HOSTS = ['localhost',
 DOMAIN = 'http://127.0.0.1:8000/'
 
 
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
